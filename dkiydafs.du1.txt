@@ -1,0 +1,53 @@
+﻿Savemanager change and more comments on upgrade / shop manager and then added a save button.
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   Assembly-CSharp-Editor-firstpass.csproj
+#	modified:   Assembly-CSharp-firstpass.csproj
+#	modified:   Assembly-CSharp.csproj
+#	modified:   Assets/GameScene.unity
+#	modified:   Assets/MenuScene.unity
+#	modified:   Assets/Scripts/BaseGame.cs
+#	modified:   Assets/Scripts/CurCon.cs
+#	modified:   Assets/Scripts/SaveManager.cs
+#	modified:   Assets/Scripts/ShopManager.cs
+#	modified:   Assets/Scripts/UpgradeManager.cs
+#	new file:   Croaz Clicker.userprefs
+#	modified:   Croaz Clicker.v11.suo
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll.mdb
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll.mdb
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll
+#	modified:   Library/ScriptAssemblies/Assembly-CSharp.dll.mdb
+#	modified:   Library/assetDatabase3
+#	modified:   Library/metadata/00/00000000000000004000000000000000
+#	modified:   Library/metadata/00/00000000000000006100000000000000
+#	modified:   Library/metadata/35/35591ba1bb26962438dff857f176e1e1
+#	modified:   Library/metadata/41/41b3e6fb105ab504a9b8cd5a8fb0405d
+#	modified:   Library/metadata/5c/5cda9720d1154f741ac44f8c88aca042
+#	modified:   Library/metadata/7d/7d5b85750acf6a342800a55fe2c6d953
+#	modified:   Library/metadata/ae/aec5227868ce3054aa09dde9cd75a2cc
+#	modified:   Library/metadata/ef/ef388512186d85e439918923ed577a02
+#	new file:   Temp/ProcessJobs/e9a6970f79cd12d8b075e7d72f1b07cb.bakert
+#
+# Untracked files:
+#	Temp/UnityLockfile
+#	Temp/UnityTempFile-05e5e8258cf8c83419a34fb1bf74249d
+#	Temp/UnityTempFile-28148898f90253b43bd631775044e17f
+#	Temp/UnityTempFile-293959e5827d13c42898963fa8a5679f
+#	Temp/UnityTempFile-33be8bab3c54fe94cb6f4ec017c636a4
+#	Temp/UnityTempFile-4b0c67f0a2bfa7141a029a33283973e1
+#	Temp/UnityTempFile-4ba331f75b201444f9d7ad377923543c
+#	Temp/UnityTempFile-5dc234742d79e3f4aace698b5879edc2
+#	Temp/UnityTempFile-668cdaefd8942854094fb9431f754868
+#	Temp/UnityTempFile-862ef0fccc038b04f9f1b56616d5df24
+#	Temp/UnityTempFile-86325af2d5a6992488645b8a779f27e4
+#	Temp/UnityTempFile-c71257420cf5c024ab4970fe77715ba6
+#	Temp/UnityTempFile-e9d44f3344600ed45ac052879820ec71
+#	Temp/__Backupscenes/
+#
+

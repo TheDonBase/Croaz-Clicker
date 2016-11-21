@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class SaveManager : MonoBehaviour
@@ -16,6 +17,7 @@ public class SaveManager : MonoBehaviour
     public float goldMade = 0;
     public int itemNumbers = 0;
     public int upgradeNumbers = 0;
+    public Text infoMsg;
 
 
     public void Start()
@@ -43,6 +45,7 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("itemNumbers", item.count);
         PlayerPrefs.SetInt("upgradeNumbers", upgrade.count);
         PlayerPrefs.Save();
+        StartCoroutine(ShowMessage("The game has just been saved.", 10));
         Debug.Log("Saved game.");
     }
 
@@ -51,9 +54,12 @@ public class SaveManager : MonoBehaviour
         // todo load system.
       
             gold = PlayerPrefs.GetFloat("gold");
-
-            goldPClick = PlayerPrefs.GetFloat("goldPerClick", 1);
-
+            if (!PlayerPrefs.HasKey("goldPerClick"))
+            {
+                goldPClick = 1;
+            } else {
+            goldPClick = PlayerPrefs.GetFloat("goldPerClick");
+            }
             goldPSec = PlayerPrefs.GetFloat("goldPerSec");
        
             clicks = PlayerPrefs.GetFloat("clicks");
@@ -65,5 +71,13 @@ public class SaveManager : MonoBehaviour
             upgradeNumbers = PlayerPrefs.GetInt("upgradeNumbers");
             
             Debug.Log("Loaded game.");
+    }
+
+    IEnumerator ShowMessage(string message, float delay)
+    {
+        infoMsg.text = message;
+        infoMsg.enabled = true;
+        yield return new WaitForSeconds(delay);
+        infoMsg.enabled = false;
     }
 }

@@ -25,7 +25,7 @@ public class BaseGame : MonoBehaviour {
     public void Start()
     {
         gold = saveManager.gold;
-        goldPerClick = goldPerClick;
+        goldPerClick = saveManager.goldPClick;
         goldPerSec = saveManager.goldPSec;
         clicks = saveManager.clicks;
         goldMade = saveManager.goldMade;
@@ -33,9 +33,9 @@ public class BaseGame : MonoBehaviour {
 
     // Updating the display info and gold per sec
 	public void Update () {
-        goldDisplay.text = "Gold: " + CurCon.Instance.GetCurrencyPrefix(gold);
-        clickDisplay.text = "Gold / Click: " + CurCon.Instance.GetCurrencyPrefix(goldPerClick);
-        dpsDisplay.text = "Gold / Sec: " + CurCon.Instance.GetCurrencyPrefix(goldPerSec);
+        goldDisplay.text = "Gold: " + CurCon.GetCurrencyPrefix(gold);
+        clickDisplay.text = "Gold / Click: " + CurCon.GetCurrencyPrefix(goldPerClick);
+        dpsDisplay.text = "Gold / Sec: " + CurCon.GetCurrencyPrefix(goldPerSec);
         goldPerSec = FindObjectOfType<FancyText>().GetGoldPerSec();
 	}
 

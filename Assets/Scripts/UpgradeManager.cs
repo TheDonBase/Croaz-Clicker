@@ -4,9 +4,31 @@ using UnityEngine.UI;
 
 public class UpgradeManager : MonoBehaviour {
 
+
+    /*-------------todo here:--------------*/
+    // A new and better UpgradeManager.
+    // Balance the cost.
+    // Add more items
+    // Multipliers
+    // Invidual upgrades
+    /*----------End of Todo--------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*------------Variables------------*/
-    public Color standard;
-    public Color affordable;
     public Text errorMsg;
     public BaseGame baseGame;
     public Text itemInfo;
@@ -28,17 +50,8 @@ public class UpgradeManager : MonoBehaviour {
     // Refreshing the iteminfo and the cost. (till i can figure out a better save/load function
     void Update()
     {
-        itemInfo.text = itemName + " (" + count + ")\nCost: " + CurCon.Instance.GetCurrencyPrefix(cost) + "\nMining Per Sec: " + CurCon.Instance.GetCurrencyPrefix(minePower);
+        itemInfo.text = itemName + " (" + count + ")\nCost: " + CurCon.GetCurrencyPrefix(cost) + "\nMining Per Sec: " + CurCon.GetCurrencyPrefix(minePower);
         cost = Mathf.Round(baseCost * Mathf.Pow(1.12f, count));
-
-        if (baseGame.gold >= cost)
-        {
-            GetComponent<Image>().color = affordable;
-        }
-        else
-        {
-            GetComponent<Image>().color = standard;
-        }
     }
 
     /*------------Buy Function------------*/
@@ -47,7 +60,7 @@ public class UpgradeManager : MonoBehaviour {
         if (baseGame.gold < cost)
         {
             float goldDifference = cost - baseGame.gold;
-            StartCoroutine(ShowMessage("You do not have the required amount of Gold to purchase " + itemName + ",\nYou are missing: " + CurCon.Instance.GetCurrencyPrefix(goldDifference) + " Gold.", 10));
+            StartCoroutine(ShowMessage("You do not have the required amount of Gold to purchase " + itemName + ",\nYou are missing: " + CurCon.GetCurrencyPrefix(goldDifference) + " Gold.", 10));
         }
         else
         {
@@ -68,36 +81,4 @@ public class UpgradeManager : MonoBehaviour {
         yield return new WaitForSeconds(delay);
         errorMsg.enabled = false;
     }
-
-
-
-
-
-
-
-
-
-
-    /*------------Better Upgrade Manager------------*/
-
-    /*
-    [System.Serializable]
-    public class _items
-    {
-        public int amountOfItems;
-        public string itemName;
-        public float cost;
-        public float addPerSec;
-        private int baseCost;
-
-
-
-
-        [System.NonSerialized]
-        public int count;
-    }*/
-    /*------------End of Upgrade Manager 2.0------------*/
-
-
-
 }

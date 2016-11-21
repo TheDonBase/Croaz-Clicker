@@ -1,32 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CurCon : MonoBehaviour {
-
-    private static CurCon instance;
-    public static CurCon Instance
-    {
-        get
-        {
-            return instance;
-        }
-    }
-
-    void Awake()
-    {
-        CreateInstance();
-    }
-
-    void CreateInstance()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
+public class CurCon
+{
 
     // Making the text better looking.
-    public string GetCurrencyPrefix(float valueToConvert)
+    public static string GetCurrencyPrefix(float valueToConvert)
     {
         string converted;
         if (valueToConvert >= 1000000000)
@@ -47,6 +26,4 @@ public class CurCon : MonoBehaviour {
         }
         return converted;
     }
-
-    // Old Code.
 }
