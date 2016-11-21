@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.Analytics;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEditor.Advertisements;
 
 public class BaseGame : MonoBehaviour {
 
@@ -20,6 +21,7 @@ public class BaseGame : MonoBehaviour {
     public float clicks = 0;
     public float goldMade = 0;
     public int diamonds = 0;
+    public int boughtAds = 0;
     /*------------End of Variables------------*/
 
     public void Start()
@@ -29,6 +31,10 @@ public class BaseGame : MonoBehaviour {
         goldPerSec = saveManager.goldPSec;
         clicks = saveManager.clicks;
         goldMade = saveManager.goldMade;
+        if (boughtAds == 1)
+        {
+            AdvertisementSettings.enabled = false;
+        }
     }
 
     // Updating the display info and gold per sec

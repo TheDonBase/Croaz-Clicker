@@ -4,6 +4,8 @@ using System.Collections;
 
 public class PlayAd : MonoBehaviour {
 
+
+
     public void ShowAd()
     {
         if (Advertisement.IsReady())
@@ -19,9 +21,11 @@ public class PlayAd : MonoBehaviour {
         {
             case ShowResult.Finished:
                 Debug.Log("Player Watched it. + 5 diamonds");
+                PlayerPrefs.SetInt("purchasedAds", 1);
                 break;
             case ShowResult.Skipped:
                 Debug.Log("Player Skipped it.");
+                
                 break;
             case ShowResult.Failed:
                 Debug.Log("Played Failed it.");

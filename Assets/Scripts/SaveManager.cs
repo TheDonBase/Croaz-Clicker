@@ -17,6 +17,8 @@ public class SaveManager : MonoBehaviour
     public float goldMade = 0;
     public int itemNumbers = 0;
     public int upgradeNumbers = 0;
+    public int boughtAds = 0;
+    public int diamonds = 0;
     public Text infoMsg;
 
 
@@ -44,6 +46,8 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetFloat("goldMade", baseGame.goldMade);
         PlayerPrefs.SetInt("itemNumbers", item.count);
         PlayerPrefs.SetInt("upgradeNumbers", upgrade.count);
+        PlayerPrefs.SetInt("diamonds", baseGame.diamonds);
+        PlayerPrefs.SetInt("purchasedAds", baseGame.boughtAds);
         PlayerPrefs.Save();
         StartCoroutine(ShowMessage("The game has just been saved.", 10));
         Debug.Log("Saved game.");
@@ -69,6 +73,10 @@ public class SaveManager : MonoBehaviour
             itemNumbers = PlayerPrefs.GetInt("itemNumbers");
         
             upgradeNumbers = PlayerPrefs.GetInt("upgradeNumbers");
+
+            boughtAds = PlayerPrefs.GetInt("purchasedAds");
+
+            diamonds = PlayerPrefs.GetInt("diamonds");
             
             Debug.Log("Loaded game.");
     }
