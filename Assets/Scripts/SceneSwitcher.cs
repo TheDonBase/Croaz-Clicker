@@ -14,8 +14,9 @@ public class SceneSwitcher : MonoBehaviour {
         SceneManager.LoadScene("GameScene");
     }
 
-    public void openStoreWindow()
+	public void openStoreWindow()
     {
         SceneManager.LoadScene("StoreScene");
     }
+		
 }

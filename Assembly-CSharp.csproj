@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\ShopManager.cs" />
      <Compile Include="Assets\Scripts\UpgradeManager.cs" />
      <None Include="Assets\HD-2D Background Art Suibokuga\Readme.txt" />
+     <None Include="Assets\Fantasy SFX for Particle Distort Texture effect library\readme_Fantasy SFX for Particle Distort Texture effect library.txt" />
      <None Include="Assets\Fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>Z:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
