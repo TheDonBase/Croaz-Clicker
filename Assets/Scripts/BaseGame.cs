@@ -27,6 +27,7 @@ public class BaseGame : MonoBehaviour {
 
     public void Start()
     {
+		saveManager.load ();
         gold = saveManager.gold;
         goldPerClick = saveManager.goldPClick;
         goldPerSec = saveManager.goldPSec;
