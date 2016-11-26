@@ -12,6 +12,7 @@ public class BaseGame : MonoBehaviour {
     public Text goldDisplay;
     public Text clickDisplay;
     public Text dpsDisplay;
+    public Text diamondDisplay;
 
     public UpgradeManager upgradeManager;
     public SaveManager saveManager;
@@ -42,6 +43,7 @@ public class BaseGame : MonoBehaviour {
         goldDisplay.text = "Gold: " + CurCon.GetCurrencyPrefix(gold);
         clickDisplay.text = "Gold / Click: " + CurCon.GetCurrencyPrefix(goldPerClick);
         dpsDisplay.text = "Gold / Sec: " + CurCon.GetCurrencyPrefix(goldPerSec);
+        diamondDisplay.text = "Diamonds: " + diamonds;
         goldPerSec = FindObjectOfType<FancyText>().GetGoldPerSec();
 	}
 
