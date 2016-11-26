@@ -10,7 +10,6 @@ public class PlayAd : MonoBehaviour {
     {
         if (Advertisement.IsReady())
         {
-
             Advertisement.Show("rewardedVideo", new ShowOptions() { resultCallback = HandleAdResult });
         }
     }

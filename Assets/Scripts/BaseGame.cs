@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.Analytics;
 using System.Collections.Generic;
 using UnityEngine.UI;
-using UnityEditor.Advertisements;
+using UnityEngine.Advertisements;
 
 public class BaseGame : MonoBehaviour {
 
@@ -33,7 +33,7 @@ public class BaseGame : MonoBehaviour {
         goldMade = saveManager.goldMade;
         if (boughtAds == 1)
         {
-            AdvertisementSettings.enabled = false;
+            Debug.Log("Bought No-ads");
         }
     }
 
