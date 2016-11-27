@@ -33,7 +33,7 @@ public class SaveManager : MonoBehaviour
         if (saveTime <= 0)
         {
             save();
-            saveTime = 300;
+            saveTime = 60;
         }
     }
 
@@ -49,7 +49,7 @@ public class SaveManager : MonoBehaviour
         PlayerPrefs.SetInt("upgrade_number1", 0);
         PlayerPrefs.SetInt("upgrade_number2", 0);
         PlayerPrefs.SetInt("upgrade_number3", 0);
-		PlayerPrefs.SetInt("diamonds", 0);
+        PlayerPrefs.SetInt("diamonds", 0);
 		PlayerPrefs.SetInt("purchasedAds", 0);
 		PlayerPrefs.Save();
 		StartCoroutine(ShowMessage("The game has just been reset.", 10));

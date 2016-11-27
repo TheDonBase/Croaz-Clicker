@@ -20,7 +20,7 @@ public class FancyText : MonoBehaviour {
             float goldPerSec = 0;
             foreach(ShopManager item in items) 
             {
-                goldPerSec += item.addPerSec * item.count;
+                goldPerSec += item.addPerSec * item.count * item.multiplier;
             }
             return goldPerSec;
         }

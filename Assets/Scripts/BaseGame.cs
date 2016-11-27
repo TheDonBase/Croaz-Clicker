@@ -33,6 +33,7 @@ public class BaseGame : MonoBehaviour {
         goldPerSec = saveManager.goldPSec;
         clicks = saveManager.clicks;
         goldMade = saveManager.goldMade;
+        diamonds = saveManager.diamonds;
         if (boughtAds == 1)
         {
             Debug.Log("Bought No-ads");

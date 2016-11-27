@@ -28,6 +28,7 @@ public class ShopManager : MonoBehaviour {
     public string itemName;
     private float baseCost;
     public SaveManager sm;
+    public int multiplier = 1;
     /*------------End of Variables------------*/
 
     // baseCost is the cost.
@@ -41,6 +42,26 @@ public class ShopManager : MonoBehaviour {
     {
         itemInfo.text = itemName + " (" + count + ")\nCost: " + CurCon.GetCurrencyPrefix(cost) + "\nGold " + CurCon.GetCurrencyPrefix(addPerSec) + " / s";
         cost = Mathf.Round(baseCost * Mathf.Pow(1.12f, count));
+        if (count >= 10 && count < 25)
+        {
+            multiplier = 2;
+        }
+        else if (count >= 25 && count < 50)
+        {
+            multiplier = 4;
+        }
+        else if (count >= 50 && count < 75)
+        {
+            multiplier = 6;
+        }
+        else if (count >= 75 && count < 100)
+        {
+            multiplier = 8;
+        }
+        else if (count >= 100)
+        {
+            multiplier = 10;
+        }
     }
 
     /*------------Buy Function------------*/

@@ -4,7 +4,15 @@ using System.Collections;
 
 public class PlayAd : MonoBehaviour {
 
+    private int oldDiamonds;
+    private int newDiamonds;
+    private int diamondsToAdd;
 
+    public void Start()
+    {
+        oldDiamonds = PlayerPrefs.GetInt("diamonds");
+        newDiamonds = 5;
+    }
 
     public void ShowAd()
     {
@@ -20,7 +28,8 @@ public class PlayAd : MonoBehaviour {
         {
             case ShowResult.Finished:
                 Debug.Log("Player Watched it. + 5 diamonds");
-                PlayerPrefs.SetInt("purchasedAds", 1);
+                diamondsToAdd += oldDiamonds + newDiamonds;
+                PlayerPrefs.SetInt("diamonds", diamondsToAdd);
                 break;
             case ShowResult.Skipped:
                 Debug.Log("Player Skipped it.");
