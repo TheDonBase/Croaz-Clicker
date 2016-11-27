@@ -13,10 +13,7 @@ using UnityEngine.Purchasing;
         public static string PRODUCT_100_DIAMONDS =    "100diamonds";   
         public static string PRODUCT_500_DIAMONDS = "500diamonds";
         public static string PRODUCT_NO_ADS =  "noads"; 
-         
-      
-        // Google Play Store-specific product identifier subscription product.
-        private static string kProductNameGooglePlaySubscription =  "com.unity3d.subscription.original"; 
+        
         
         void Start()
         {

@@ -44,7 +44,6 @@ public class UpgradeManager : MonoBehaviour {
     void Start()
     {
         baseCost = cost;
-        count = sm.upgradeNumbers;
     }
 
     // Refreshing the iteminfo and the cost. (till i can figure out a better save/load function

@@ -34,7 +34,6 @@ public class ShopManager : MonoBehaviour {
     void Start()
     {
         baseCost = cost;
-        count = sm.itemNumbers;
     }
 
     // Refreshing the iteminfo and the cost. (till i can figure out a better save/load function
