@@ -23,6 +23,7 @@ public class BaseGame : MonoBehaviour {
     public float goldMade = 0;
     public int diamonds = 0;
     public int boughtAds = 0;
+    private float timer = 300;
     /*------------End of Variables------------*/
 
     public void Start()
@@ -47,7 +48,17 @@ public class BaseGame : MonoBehaviour {
         dpsDisplay.text = "Gold / Sec: " + CurCon.GetCurrencyPrefix(goldPerSec);
         diamondDisplay.text = "Diamonds: " + diamonds;
         goldPerSec = FindObjectOfType<FancyText>().GetGoldPerSec();
-	}
+
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            if (Advertisement.IsReady())
+            {
+                Advertisement.Show("video", new ShowOptions() { resultCallback = HandleAdResult });
+            }
+            timer = 300;
+        }
+    }
 
 
     // Click function
@@ -58,5 +69,21 @@ public class BaseGame : MonoBehaviour {
         goldMade++;
     }
 
+    private void HandleAdResult(ShowResult result)
+    {
+        switch (result)
+        {
+            case ShowResult.Finished:
+                Debug.Log("Player Watched it.");
+                break;
+            case ShowResult.Skipped:
+                Debug.Log("Player Skipped it.");
+
+                break;
+            case ShowResult.Failed:
+                Debug.Log("Played Failed it.");
+                break;
+        }
+    }
     
 }
