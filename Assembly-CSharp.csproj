@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\SceneSwitcher.cs" />
      <Compile Include="Assets\Scripts\ShopManager.cs" />
      <Compile Include="Assets\Scripts\UpgradeManager.cs" />
+     <Compile Include="Assets\Scripts\cameraRes.cs" />
      <Compile Include="Assets\Scripts\savegameReset.cs" />
      <None Include="Assets\HD-2D Background Art Suibokuga\Readme.txt" />
      <None Include="Assets\Fantasy SFX for Particle Distort Texture effect library\readme_Fantasy SFX for Particle Distort Texture effect library.txt" />
