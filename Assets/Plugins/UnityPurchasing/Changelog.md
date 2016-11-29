@@ -1,3 +1,15 @@
+## [1.9.1] - 2016-11-17
+### Added
+- [Beta] Codeless IAP — UI fields show title, price, and description downloaded from the platform store
+
+### Fixed
+- IAPButton component now updates product ID list as the IAP Catalog is being edited
+- IAP Catalog now includes a store ID field for the Cloud Moolah store
+- Fixed a problem with opening a project containing the Unity IAP plugin while IAP was disabled in the Services window
+- IAPButton inspector field for Product ID now works correctly with Undo
+- Set GooglePlay as default Android store AAR fileset. Excludes other store's assets (Java, resource XML, localization), saving ~196kb in default APK. Creates Assets/Plugins/UnityPurchasing/Resources/BillingMode.json in Project. Configure manually with Window > Unity IAP > Android menu, or UnityPurchasingEditor.TargetAndroidStore(AndroidStore).
+- CloudMoolah - update Window > Unity IAP > Android menu checkmarks when CloudMoolah selected
+
 ## [1.9.0] - 2016-10-31
 ### Added
 - CloudMoolah support. CloudMoolah website [here](http://www.cloudmoolah.com). Preliminary store guide available [here](https://docs.google.com/document/d/1T9CEZe6eNCwgWkq7lLwrEw7rpSbu3_EjcUVgJJL6xA0/edit). Preliminary configuration document available [here](https://docs.google.com/document/d/1dpc3zqsyROeFUVBy9W9pc0sskCPyfhcRnsGxtyITmyQ/edit).

@@ -1,4 +1,5 @@
-﻿using UnityEngine.Events;
+#if UNITY_PURCHASING
+using UnityEngine.Events;
 using UnityEngine.UI;
 using System.IO;
 using System.Collections.Generic;
@@ -28,6 +29,15 @@ namespace UnityEngine.Purchasing
 		[Tooltip("Event fired after a failed purchase of this product")]
 		public OnPurchaseFailedEvent onPurchaseFailed;
 
+		[Tooltip("[Optional] Displays the localized title from the app store")]
+		public Text titleText;
+
+		[Tooltip("[Optional] Displays the localized description from the app store")]
+		public Text descriptionText;
+
+		[Tooltip("[Optional] Displays the localized price from the app store")]
+		public Text priceText;
+
 		void Start ()
 		{
 			Button button = GetComponent<Button>();
@@ -47,6 +57,21 @@ namespace UnityEngine.Purchasing
 		void OnEnable()
 		{
 			IAPButtonStoreManager.Instance.AddButton(this);
+
+			var product = IAPButtonStoreManager.Instance.GetProduct(productId);
+			if (product != null) {
+				if (titleText != null) {
+					titleText.text = product.metadata.localizedTitle;
+				}
+
+				if (descriptionText != null) {
+					descriptionText.text = product.metadata.localizedDescription;
+				}
+
+				if (priceText != null) {
+					priceText.text = product.metadata.localizedPriceString;
+				}
+			}
 		}
 
 		void OnDisable()
@@ -197,3 +222,4 @@ namespace UnityEngine.Purchasing
 		}
 	}
 }
+#endif

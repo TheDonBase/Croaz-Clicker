@@ -53,6 +53,8 @@ public class SaveManager : MonoBehaviour
 		PlayerPrefs.SetInt("purchasedAds", 0);
 		PlayerPrefs.Save();
 		StartCoroutine(ShowMessage("The game has just been reset.", 10));
+        load();
+        baseGame.Update();
 		Debug.Log("Reset game.");
 	}
     public void save()
